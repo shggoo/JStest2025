@@ -26,18 +26,27 @@
                 $("#disp1").css("font-family","fantasy");
                 $("#disp1").css("background-color","lightgray");
 
-                var a=0;
-                var txt= "";
-                txt += "a: " + a  + "<br>";
-                
-                if(a==1){
-                    txt += "TRUE<br>";
-                } else{
-                    txt += "FALSE<br>";
+                let txt1 ="";
+                let pointA =[5,2];
+                txt1 += "x:" + pointA[0] + ",y:" + pointA[1] + "<br>";
+                for(let i = 0; i<pointA.length; i++){
+                    pointA[i] += 5;
                 }
-                txt += "a: "+a+"<br>";
-                $("#disp2").html(txt);
-                            }
+                txt1 += "x:" + pointA[0] + ",y:" + pointA[1] + "<br>";
+                $("#disp1").html(txt1);
+
+                let txt2 = "";
+                let pointH = {x:5, y:2};
+                txt2 += "x:" + pointH["x"] +
+                        ",y:" + pointH["y"]+ "<br>";
+                for(let key in pointH){
+                    pointH[key] +=5;
+                }
+                txt2 += "x:" +pointH["x"]+
+                        ",y:" + pointH["y"] + "<br>";
+                $("#disp2").html(txt2);
+
+            }
         </script>
     </head>
 
